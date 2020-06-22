@@ -291,27 +291,23 @@ Promise.all([
             Animation.samplers.easeInOutSine(-0.78568 - 0.1, 1.5)
         );
 
+        scorpion.transform.x = Animation.animate(timeDriver, Animation.samplers.easeInOutSine(scorpion.transform.x.pinLastValue(), 0.2));
+        scorpion.transform.y = Animation.animate(timeDriver, Animation.samplers.easeInOutSine(scorpion.transform.y.pinLastValue(), -0.29261));
+        scorpion.transform.z = Animation.animate(timeDriver, Animation.samplers.easeInOutSine(scorpion.transform.z.pinLastValue(), -0.1997));
 
+        scorpion1.transform.x = Animation.animate(timeDriver, Animation.samplers.easeInOutSine(scorpion1.transform.x.pinLastValue(), -0.19071));
+        scorpion1.transform.y = Animation.animate(timeDriver, Animation.samplers.easeInOutSine(scorpion1.transform.y.pinLastValue(), -0.29261));
+        scorpion1.transform.z = Animation.animate(timeDriver, Animation.samplers.easeInOutSine(scorpion1.transform.z.pinLastValue(), -0.5));
+
+        scorpion2.transform.x = Animation.animate(timeDriver, Animation.samplers.easeInOutSine(scorpion2.transform.x.pinLastValue(), -0.19071));
+        scorpion2.transform.y = Animation.animate(timeDriver, Animation.samplers.easeInOutSine(scorpion2.transform.y.pinLastValue(), -0.29261));
+        scorpion2.transform.z = Animation.animate(timeDriver, Animation.samplers.easeInOutSine(scorpion2.transform.z.pinLastValue(), -1.5));
 
     	castle.transform.x = moveX;/*-0.1053;*/
 		castle.transform.y = moveY;/*2.5;*/
 		castle.transform.z = moveZ;/*-0.93747;*/
         knight.transform.y = knightMoveY;
 		timeDriver.start();
-
-		Time.setTimeout(() => {
-    		scorpion.transform.x = 0.2;
-			scorpion.transform.y = -0.29261;
-			scorpion.transform.z = -0.1997;
-
-			scorpion1.transform.x = -0.19071;
-			scorpion1.transform.y = -0.29261;
-			scorpion1.transform.z = -0.5;
-
-			scorpion2.transform.x = -0.19071;
-			scorpion2.transform.y = -0.29261;
-			scorpion2.transform.z = -1.5;
-    	}, 1050);
 
 		cage.transform.y = 0.25;
 		cage.transform.z = 1.10;
