@@ -91,7 +91,7 @@ const prizesStep = (questionsCount/5); //5 is tresor, the last prize
 Promise.all([
     gameRoot.child('Question Scrolling Paper').child('canvas0').findFirst('questionText'),
     gameRoot.findFirst('Knight Idle'),
-    gameRoot.findFirst('Knight Action'),
+    gameRoot.findFirst('Knight Idle0'),
     gameRoot.child('Question Scrolling Paper').findFirst('firstChoice'),
     gameRoot.child('Question Scrolling Paper').child('firstChoice').child('canvas0').findFirst('choiceText'),
     gameRoot.child('Question Scrolling Paper').findFirst('secondChoice'),
@@ -105,9 +105,9 @@ Promise.all([
     gameRoot.findFirst('Crown'),
     //Steps
     gameRoot.findFirst('step'),
-    gameRoot.findFirst('step1'),
-    gameRoot.findFirst('step2'),
-    gameRoot.findFirst('step0'),
+    gameRoot.findFirst('step'),
+    gameRoot.findFirst('step'),
+    gameRoot.findFirst('step'),
     Scene.root.child('Device').find('Camera'),
     gameRoot.child('Castle').find('Cube'),
     gameRoot.find('Cage'),
@@ -134,9 +134,6 @@ Promise.all([
     const questionPaper = results[7];
 
     const step1 = results[13];
-    const step2 = results[14];
-    const step3 = results[15];
-    const step4 = results[16];
 
     const camera = results[17];
     const dangerArea = results[18];
